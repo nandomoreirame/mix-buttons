@@ -21,6 +21,10 @@
   -ms-appearance: none;
   appearance: none;
 }
+.button:active, .btn-ghost:active, .btn-ghost-primary:active, .btn-ghost-upper:active, .btn-blue:active, .btn-dark-blue:active, .btn-ghost-blue:active, .btn-violet:active, .btn-crimson:active, .btn-aqua:active, .btn-coral:active, .btn-gold:active, .btn-green:active, .btn-lime-green:active {
+  position: relative;
+  top: 2px;
+}
 
 .button {
   -webkit-border-radius: 2px;
