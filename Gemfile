@@ -8,4 +8,5 @@ group :development do
 
   # for doc
   gem 'jekyll'
+  gem 'rake', '~> 10.4.2'
 end

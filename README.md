@@ -1,10 +1,14 @@
-# mixin-buttons
+# Mixin buttons
 
-> Mixins for generate beautiful buttons
+> SASS Mixins for generate beautiful buttons
 
-### [preview and doc](http://nandomoreira.me/mixin-buttons)
+#### [preview and doc](http://nandomoreira.me/mixin-buttons)
 
-## Copyright and license
+![Mixin buttons](/screenshot.png)
+
+---
+
+### Copyright and license
 
 It is under [the MIT license](/LICENSE).
 
