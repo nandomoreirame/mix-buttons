@@ -1,0 +1,30 @@
+
+@import "variables";
+@import "mixins";
+@import "placeholder";
+
+@mixin button(
+  $font-color: $white-color,
+  $bg-color: $primary-color,
+  $border-radius: 0,
+  $font-weight: 700,
+  $ghost: false,
+  $upper: true
+) {
+  @extend %default-button;
+  @include button-border-radius($border-radius);
+  font-weight: $font-weight;
+  @if $upper == true {
+    text-transform: uppercase;
+  }
+
+  $border-color: darken($bg-color, 5%);
+  $bg-color: $bg-color;
+
+  @if $ghost == true {
+    $bg-color: transparent;
+    $border-color: darken($font-color, 5%);
+  }
+
+  @include button-color-variant($font-color, $bg-color, $border-color, $ghost);
+}

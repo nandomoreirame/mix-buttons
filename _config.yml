@@ -1,0 +1,14 @@
+
+# Site settings
+title: Mixin Buttons
+baseurl: "/mixin-buttons"
+url: "http://nandomoreira.me"
+
+# Build settings
+markdown: kramdown
+
+source: doc
+destination: _site
+sass:
+  sass_dir: _sass
+  style: compressed

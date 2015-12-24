@@ -1,0 +1,66 @@
+
+@import "sass-buttons";
+
+.button {
+  @include button($white-color, $primary-color, 2px, 700, false);
+}
+
+.btn-ghost {
+  @include button($white-color, $primary-color, 0, 300, true, true);
+}
+
+.btn-ghost-primary {
+  @include button($primary-color, $primary-color, 0, 700, true, true);
+}
+
+.btn-ghost-upper {
+  @include button($white-color, $primary-color, 0, 500, true, false);
+}
+
+.btn-blue {
+  @include button($white-color, $blue-color, 2px, 700, false);
+}
+
+.btn-dark-blue {
+  @include button($white-color, $dark-blue-color, 2px, 700, false);
+}
+
+.btn-ghost-blue {
+  @include button($blue-color, $primary-color, 0, 500, true, true);
+}
+
+.btn-violet {
+  @include button($white-color, $violet-color, 2px, 500, false, false);
+}
+
+.btn-crimson {
+  @include button($white-color, $crimson-color, 2px, 500, false, false);
+}
+
+.btn-aqua {
+  @include button(rgba(lighten($black-color, 25%), .7), $aqua-color, 2px, 500, false, false);
+}
+
+.btn-coral {
+  @include button($white-color, $coral-color, 2px, 500, false, false);
+}
+
+.btn-gold {
+  @include button(rgba(lighten($black-color, 35%), .7), $gold-color, 2px, 500, false, false);
+}
+
+.btn-green {
+  @include button($white-color, $green-color, 2px, 500, false, false);
+}
+
+.btn-lime-green {
+  @include button($white-color, $lime-green-color, 2px, 500, false, false);
+}
+
+.btn-small {
+  @include button-size-variant($button-small-height, $button-small-spacing, $button-small-font-size);
+}
+
+.btn-big {
+  @include button-size-variant($button-big-height, $button-big-spacing, $button-big-font-size);
+}
