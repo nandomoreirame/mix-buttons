@@ -1,3 +1,9 @@
+* {
+  &, &:before, &:after {
+    box-sizing: border-box;
+  }
+}
+
 body {
   font-family: 'Raleway', Helvetica, sans-serif;
   font-feature-settings: "kern", "liga", "pnum";
@@ -23,11 +29,12 @@ h2 {
 }
 
 header {
-  padding: 1.6em 0;
+  padding: 1.6em 1.2em;
   background-color: #f1f1f1;
   border-bottom: 1px solid #eee;
 
   h1 {
+    font-weight: 500;
     margin: 0 0 .8em;
   }
 }
@@ -48,7 +55,7 @@ footer {
 
 .bg-full {
   width: 100%;
-  padding: 4em 0;
+  padding: 4em 1.2em;
 }
 
 .bg-gray,
