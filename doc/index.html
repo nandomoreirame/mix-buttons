@@ -25,18 +25,18 @@ layout: default
 
 {% highlight scss %}
 .button {
-  @include button(#fff, #8cd1a8, 2px, 700, false);
+  @include button(#fff, #8cd1a8);
 }
 {% endhighlight %}
 
 </div>
 
 <div class="bg-full bg-gray">
-  <a href="#" class="btn-ghost">Button Ghost</a>
+  <a href="#" class="btn-ghost">Ghost</a>
 
 {% highlight scss %}
 .btn-ghost {
-  @include button(#fff, #8cd1a8, 0, 300, true, true);
+  @include button(#fff, #8cd1a8, 0, 300, capitalize, true);
 }
 {% endhighlight %}
 
@@ -47,40 +47,44 @@ layout: default
 
 {% highlight scss %}
 .btn-ghost-primary {
-  @include button(#8cd1a8, #8cd1a8, 0, 700, true, true);
+  @include button(#8cd1a8, #8cd1a8, 0, 700, capitalize, true);
 }
 {% endhighlight %}
 
 </div>
 
 <div class="bg-full bg-blue">
-  <a href="#" class="btn-ghost-upper">No uppercase</a>
+  <a href="#" class="btn-ghost-upper">uppercase</a>
+  <a href="#" class="btn-ghost-lower">lowercase</a>
 
 {% highlight scss %}
 .btn-ghost-upper {
-  @include button(#fff, #8cd1a8, 0, 500, true, false);
+  @include button(#fff, #8cd1a8, 0, 500, uppercase, true);
+}
+.btn-ghost-lower {
+  @include button(#fff, #8cd1a8, 0, 500, lowercase, true);
 }
 {% endhighlight %}
 
 </div>
 
 <div class="bg-full bg-silver">
-  <a href="#" class="btn-blue">Button blue</a>
+  <a href="#" class="btn-blue">Button Blue</a>
 
 {% highlight scss %}
 .btn-blue {
-  @include button(#fff, #4696e5, 2px, 700, false);
+  @include button(#fff, #4696e5, 0, 700);
 }
 {% endhighlight %}
 
 </div>
 
 <div class="bg-full">
-  <a href="#" class="btn-ghost-blue">Ghost blue</a>
+  <a href="#" class="btn-ghost-blue">Ghost Blue</a>
 
 {% highlight scss %}
 .btn-ghost-blue {
-  @include button(#4696e5, #8cd1a8, 0, 500, true, true);
+  @include button(#4696e5, #8cd1a8, 0, 500, capitalize, true);
 }
 {% endhighlight %}
 
@@ -88,26 +92,26 @@ layout: default
 
 <div class="bg-full bg-gray">
   <h2># custom your palette colors</h2>
-  <a href="#" class="btn-dark-blue">dark blue</a>
-  <a href="#" class="btn-green">green</a>
-  <a href="#" class="btn-lime-green">lime green</a>
-  <a href="#" class="btn-violet">violet</a>
-  <a href="#" class="btn-crimson">crimson</a>
-  <a href="#" class="btn-aqua">aqua</a>
-  <a href="#" class="btn-coral">coral</a>
-  <a href="#" class="btn-gold">gold</a>
+  <a href="#" class="btn-dark-blue">Dark Blue</a>
+  <a href="#" class="btn-green">Green</a>
+  <a href="#" class="btn-lime-green">Lime Green</a>
+  <a href="#" class="btn-violet">Violet</a>
+  <a href="#" class="btn-crimson">Crimson</a>
+  <a href="#" class="btn-aqua">Aqua</a>
+  <a href="#" class="btn-coral">Coral</a>
+  <a href="#" class="btn-gold">Gold</a>
 </div>
 
 <div class="bg-full">
   <h2># small size</h2>
-  <a href="#" class="btn-dark-blue btn-small">dark blue</a>
-  <a href="#" class="btn-green btn-small">green</a>
-  <a href="#" class="btn-lime-green btn-small">lime green</a>
-  <a href="#" class="btn-violet btn-small">violet</a>
-  <a href="#" class="btn-crimson btn-small">crimson</a>
-  <a href="#" class="btn-aqua btn-small">aqua</a>
-  <a href="#" class="btn-coral btn-small">coral</a>
-  <a href="#" class="btn-gold btn-small">gold</a>
+  <a href="#" class="btn-dark-blue btn-small">Dark Blue</a>
+  <a href="#" class="btn-green btn-small">Green</a>
+  <a href="#" class="btn-lime-green btn-small">Lime Green</a>
+  <a href="#" class="btn-violet btn-small">Violet</a>
+  <a href="#" class="btn-crimson btn-small">Crimson</a>
+  <a href="#" class="btn-aqua btn-small">Aqua</a>
+  <a href="#" class="btn-coral btn-small">Coral</a>
+  <a href="#" class="btn-gold btn-small">Gold</a>
 
 {% highlight scss %}
 .btn-small {
@@ -119,10 +123,10 @@ layout: default
 
 <div class="bg-full bg-silver">
   <h2># big size</h2>
-  <a href="#" class="btn-green btn-big">green</a>
-  <a href="#" class="btn-lime-green btn-big">lime green</a>
-  <a href="#" class="btn-violet btn-big">violet</a>
-  <a href="#" class="btn-coral btn-big">coral</a>
+  <a href="#" class="btn-green btn-big">Green</a>
+  <a href="#" class="btn-lime-green btn-big">Lime Green</a>
+  <a href="#" class="btn-violet btn-big">Violet</a>
+  <a href="#" class="btn-coral btn-big">Coral</a>
 
 {% highlight scss %}
 .btn-big {

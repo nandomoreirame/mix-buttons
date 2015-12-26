@@ -1,66 +1,39 @@
 
 @import "sass-buttons";
 
-.button {
-  @include button($white-color, $primary-color, 2px, 700, false);
-}
+$primary-color: $button-primary-color;
 
-.btn-ghost {
-  @include button($white-color, $primary-color, 0, 300, true, true);
-}
+$blue-color: #4696e5;
+$dark-blue-color: #00008b;
+$green-color: #008000;
+$lime-green-color: #32cd32;
+$violet-color: #8a2be2;
+$crimson-color: #dc143c;
+$aqua-color: #00ffff;
+$coral-color: #ff7f50;
+$gold-color: #ffd700;
 
-.btn-ghost-primary {
-  @include button($primary-color, $primary-color, 0, 700, true, true);
-}
+// button
+.button { @include button($white-color, $primary-color) }
 
-.btn-ghost-upper {
-  @include button($white-color, $primary-color, 0, 500, true, false);
-}
+// ghost
+.btn-ghost { @include button($white-color, $primary-color, 0, 300, uppercase, true) }
+.btn-ghost-primary { @include button($primary-color, $primary-color, 0, 700, uppercase, true) }
+.btn-ghost-blue { @include button($blue-color, $primary-color, 0, 500, uppercase, true) }
+.btn-ghost-upper { @include button($white-color, $primary-color, 0, 500, uppercase, true) }
+.btn-ghost-lower { @include button($white-color, $primary-color, 0, 500, lowercase, true) }
 
-.btn-blue {
-  @include button($white-color, $blue-color, 2px, 700, false);
-}
+// palette
+.btn-blue { @include button($white-color, $blue-color) }
+.btn-dark-blue { @include button($white-color, $dark-blue-color) }
+.btn-violet { @include button($white-color, $violet-color) }
+.btn-crimson { @include button($white-color, $crimson-color) }
+.btn-aqua { @include button(rgba(lighten($black-color, 25%), .7), $aqua-color) }
+.btn-coral { @include button($white-color, $coral-color) }
+.btn-gold { @include button(rgba(lighten($black-color, 35%), .7), $gold-color) }
+.btn-green { @include button($white-color, $green-color) }
+.btn-lime-green { @include button($white-color, $lime-green-color) }
 
-.btn-dark-blue {
-  @include button($white-color, $dark-blue-color, 2px, 700, false);
-}
-
-.btn-ghost-blue {
-  @include button($blue-color, $primary-color, 0, 500, true, true);
-}
-
-.btn-violet {
-  @include button($white-color, $violet-color, 2px, 500, false, false);
-}
-
-.btn-crimson {
-  @include button($white-color, $crimson-color, 2px, 500, false, false);
-}
-
-.btn-aqua {
-  @include button(rgba(lighten($black-color, 25%), .7), $aqua-color, 2px, 500, false, false);
-}
-
-.btn-coral {
-  @include button($white-color, $coral-color, 2px, 500, false, false);
-}
-
-.btn-gold {
-  @include button(rgba(lighten($black-color, 35%), .7), $gold-color, 2px, 500, false, false);
-}
-
-.btn-green {
-  @include button($white-color, $green-color, 2px, 500, false, false);
-}
-
-.btn-lime-green {
-  @include button($white-color, $lime-green-color, 2px, 500, false, false);
-}
-
-.btn-small {
-  @include button-size-variant($button-small-height, $button-small-spacing, $button-small-font-size);
-}
-
-.btn-big {
-  @include button-size-variant($button-big-height, $button-big-spacing, $button-big-font-size);
-}
+// sizes
+.btn-small { @include button-size-variant($button-small-height, $button-small-spacing, $button-small-font-size) }
+.btn-big { @include button-size-variant($button-big-height, $button-big-spacing, $button-big-font-size) }
