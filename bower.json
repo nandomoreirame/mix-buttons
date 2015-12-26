@@ -13,9 +13,11 @@
     "node_modules",
     "bower_components",
     "sass/buttons.scss",
+    "Gemfile",
     "Gemfile.lock",
     "_config.yml",
     "Rakefile",
+    "config.rb",
     "doc"
   ],
   "keywords": [
