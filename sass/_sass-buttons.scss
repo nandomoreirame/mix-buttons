@@ -109,10 +109,10 @@
   white-space: nowrap;
   cursor: pointer;
   display: inline-block;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: $button-margin;
+  margin-bottom: $button-margin;
   @include button-size-variant();
-  @include button-transition(background-color .2s ease-in-out, color .2s ease-in-out, border-color .2s ease-in-out);
+  @include button-transition($button-transition);
   @include button-appearance;
 
   &:active {
