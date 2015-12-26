@@ -1,4 +1,28 @@
 {
   "name": "mixin-buttons",
-  "version": "1.0.0"
+  "description": "SASS Mixins for generate beautiful buttons",
+  "homepage": "https://github.com/nandomoreirame/mixin-buttons",
+  "author": "Fernando Moreira <nandomoreira.me@gmail.com>",
+  "license": "MIT",
+  "main": [
+    "sass/_variables.scss",
+    "sass/_sass-buttons.scss"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "sass/buttons.scss",
+    "Gemfile.lock",
+    "_config.yml",
+    "Rakefile",
+    "doc"
+  ],
+  "keywords": [
+    "sass",
+    "mixins",
+    "mixin",
+    "scss",
+    "buttons"
+  ]
 }
