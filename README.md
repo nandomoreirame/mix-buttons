@@ -37,7 +37,9 @@
 
 #### [preview and doc](http://nandomoreira.me/mix-buttons)
 
-![Mix buttons](/screenshot.png)
+<a href="http://nandomoreira.me/mix-buttons">
+  <img src="/doc/mix-buttons.jpg" alt="Mix buttons">
+</a>
 
 ---
 

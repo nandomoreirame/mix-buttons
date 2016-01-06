@@ -4,6 +4,7 @@ title: Mix Buttons
 baseurl: "/mix-buttons"
 description: "SASS Mixins for generate beautiful buttons"
 url: "http://nandomoreira.me"
+image: "/mix-buttons.jpg"
 
 # Build settings
 markdown: kramdown

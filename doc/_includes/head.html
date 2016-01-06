@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>{{ site.title }} | {{ site.description }}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
@@ -12,5 +12,20 @@
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/buttons.css" | prepend: site.baseurl }}">
 
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="canonical" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
+
+  <meta property="fb:admins" content="100003797913346">
+  <meta property="fb:app_id" content="585852118228520">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ '/' | prepend: site.baseurl | prepend: site.url }}">
+  <meta property="og:title" content="{{ site.title }}">
+  <meta property="og:image" content="{{ site.description }}">
+  <meta property="og:description" content="{{ site.image | prepend: site.baseurl | prepend: site.url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@nandomoreirame">
+  <meta name="twitter:title" content="{{ site.title }}">
+  <meta name="twitter:description" content="{{ site.description }}">
+  <meta name="twitter:image:src" content="{{ site.image | prepend: site.baseurl | prepend: site.url }}">
 </head>
