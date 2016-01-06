@@ -1,12 +1,17 @@
 
 # Site settings
-title: Mixin Buttons
-baseurl: "/mixin-buttons"
+title: Mix Buttons
+baseurl: "/mix-buttons"
 description: "SASS Mixins for generate beautiful buttons"
 url: "http://nandomoreira.me"
 
 # Build settings
 markdown: kramdown
+highlighter: pygments
+
+gems:
+  - jekyll-paginate
+  - jekyll-gist
 
 source: doc
 destination: _site

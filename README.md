@@ -4,17 +4,17 @@
 
 ## Installation ##
 
-* **bower**: `bower install mixin-buttons`
+* **bower**: `bower install mix-buttons`
 
 ## Usage ##
 
 ```
-@import "sass-buttons";
+@import "mix-buttons";
 
 .my-button-class {
   @include button(
-    $font-color,
     $background-color,
+    $font-color,
     $border-radius,
     $font-weight,
     $boolean-button-ghost,
@@ -33,7 +33,7 @@
 
 ---
 
-#### [preview and doc](http://nandomoreira.me/mixin-buttons)
+#### [preview and doc](http://nandomoreira.me/mix-buttons)
 
 ![Mixin buttons](/screenshot.png)
 

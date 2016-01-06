@@ -8,5 +8,8 @@ group :development do
 
   # for doc
   gem 'jekyll'
+  gem 'jekyll-gist'
+  gem 'jekyll-paginate'
+  gem 'pygments.rb'
   gem 'rake', '~> 10.4.2'
 end

@@ -1,4 +1,4 @@
-@import "variables";
+@import "mix-variables";
 
 //
 // mixin Button transition
@@ -6,9 +6,9 @@
 // @param $transitions
 //
 // usage:
-//    @include button-transition(background-color .2s ease-in-out);
+//    @include mix-transition(background-color .2s ease-in-out);
 //
-@mixin button-transition($transitions...) {
+@mixin mix-transition($transitions...) {
   -webkit-transition: $transitions;
      -moz-transition: $transitions;
       -ms-transition: $transitions;
@@ -23,7 +23,7 @@
 // usage:
 //    @include appearance(none);
 //
-@mixin button-appearance($appearance: none) {
+@mixin mix-appearance($appearance: none) {
   -webkit-appearance: $appearance;
      -moz-appearance: $appearance;
       -ms-appearance: $appearance;
@@ -38,14 +38,14 @@
 // usage:
 //    @include border-radius(4px);
 //
-@mixin button-border-radius($radius) {
+@mixin mix-border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
           border-radius: $radius;
 }
 
 //
-// mixin button-color-variant
+// mixin mix-color-variant
 //
 // @param $font-color
 // @param $bg-color
@@ -53,13 +53,13 @@
 // @param $ghost
 //
 // usage:
-//    @include button-color-variant(#fff, #8cd1a8, transparent, false);
+//    @include mix-color-variant(#fff, #8cd1a8, transparent, false);
 //
-@mixin button-color-variant(
-  $font-color: $white-color,
-  $bg-color: $button-primary-color,
-  $border-color: $button-border-color,
-  $ghost: $button-ghost
+@mixin mix-color-variant(
+  $font-color: $mix-white-color,
+  $bg-color: $mix-primary-color,
+  $border-color: $mix-border-color,
+  $ghost: $mix-ghost
 ) {
   color: $font-color;
   background-color: $bg-color;
@@ -71,7 +71,7 @@
     border-color: darken($border-color, 6%);
 
     @if $ghost == true {
-      $bg-color: rgba($white-color, .1);
+      $bg-color: rgba($mix-white-color, .1);
     }
 
     background-color: darken($bg-color, 5%);
@@ -79,41 +79,48 @@
 }
 
 //
-// mixin button-size-variant
+// mixin mix-button-size
 //
-// @param $button-height
-// @param $button-spacing
-// @param $button-font-size
+// @param $mix-height
+// @param $mix-spacing
+// @param $mix-font-size
 //
 // usage:
-//    @include button-size-variant(1.2em, 2em, 16px);
+//    @include mix-button-size(1.2em, 2em, 16px);
 //
-@mixin button-size-variant(
-  $button-height: $button-base-height,
-  $button-spacing: $button-base-spacing,
-  $button-font-size: $button-base-font-size
+@mixin mix-button-size(
+  $mix-height: $mix-base-height,
+  $mix-spacing: $mix-base-spacing,
+  $mix-font-size: $mix-base-font-size
 ) {
-  height: $button-height;
-  line-height: $button-height;
-  padding: 0 $button-spacing;
-  font-size: $button-font-size;
+  height: $mix-height;
+  line-height: $mix-height;
+  padding: 0 $mix-spacing;
+  font-size: $mix-font-size;
 }
 
 //
-// placeholder %default-button | http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholder_selectors_
+// placeholder %default-mix-button | http://sass-lang.com/documentation/file.SASS_REFERENCE.html#placeholder_selectors_
 //
-%default-button {
+%default-mix-button {
   letter-spacing: .05em;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
   display: inline-block;
-  margin-top: $button-margin;
-  margin-bottom: $button-margin;
-  @include button-size-variant();
-  @include button-transition($button-transition);
-  @include button-appearance;
+  margin-top: $mix-margin;
+  margin-bottom: $mix-margin;
+  @include mix-button-size();
+  @include mix-transition($mix-transition);
+  @include mix-appearance;
+
+  &,
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
 
   &:active {
     position: relative;
@@ -124,25 +131,25 @@
 //
 // mixin button
 //
-// @param $font-color
 // @param $bg-color
+// @param $font-color
 // @param $border-radius
 // @param $font-weight
 // @param $ghost
 // @param $upper
 //
 // usage:
-//    @include button(#fff, #8cd1a8, 2px, 700, false, false);
+//    @include mix-button(#8cd1a8, #fff, 2px, 700, false, false);
 //
-@mixin button(
-  $font-color: $white-color,
-  $bg-color: $primary-color,
-  $border-radius: $button-border-radius,
-  $font-weight: $button-font-weight,
-  $ttransform: $button-ttransform,
-  $ghost: $button-ghost
+@mixin mix-button(
+  $bg-color: $mix-primary-color,
+  $font-color: $mix-white-color,
+  $border-radius: $mix-border-radius,
+  $font-weight: $mix-font-weight,
+  $ttransform: $mix-ttransform,
+  $ghost: $mix-ghost
 ) {
-  @extend %default-button;
+  @extend %default-mix-button;
   font-weight: $font-weight;
   text-transform: $ttransform;
 
@@ -154,6 +161,6 @@
     $border-color: darken($font-color, 5%);
   }
 
-  @include button-border-radius($border-radius);
-  @include button-color-variant($font-color, $bg-color, $border-color, $ghost);
+  @include mix-border-radius($border-radius);
+  @include mix-color-variant($font-color, $bg-color, $border-color, $ghost);
 }

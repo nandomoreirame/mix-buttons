@@ -1,8 +1,10 @@
 
-@import "sass-buttons";
+@import "mix-buttons";
 
-$primary-color: $button-primary-color;
+$primary-color: $mix-primary-color;
 
+$white-color: $mix-white-color;
+$black-color: $mix-black-color;
 $blue-color: #4696e5;
 $dark-blue-color: #00008b;
 $green-color: #008000;
@@ -14,26 +16,29 @@ $coral-color: #ff7f50;
 $gold-color: #ffd700;
 
 // button
-.button { @include button($white-color, $primary-color) }
+.button { @include mix-button() }
+.button-no-round { @include mix-button($blue-color, $white-color, 0, 700, lowercase) }
+.button-round { @include mix-button($green-color, $white-color, 5px, 700, lowercase) }
+.button-rounded { @include mix-button($violet-color, $white-color, 200px, 700, lowercase) }
 
 // ghost
-.btn-ghost { @include button($white-color, $primary-color, 0, 300, uppercase, true) }
-.btn-ghost-primary { @include button($primary-color, $primary-color, 0, 700, uppercase, true) }
-.btn-ghost-blue { @include button($blue-color, $primary-color, 0, 500, uppercase, true) }
-.btn-ghost-upper { @include button($white-color, $primary-color, 0, 500, uppercase, true) }
-.btn-ghost-lower { @include button($white-color, $primary-color, 0, 500, lowercase, true) }
+.btn-ghost { @include mix-button($primary-color, $white-color, 0, 300, uppercase, true) }
+.btn-ghost-primary { @include mix-button($primary-color, $primary-color, 0, 700, uppercase, true) }
+.btn-ghost-blue { @include mix-button($primary-color, $blue-color, 0, 500, uppercase, true) }
+.btn-ghost-upper { @include mix-button($primary-color, $white-color, 0, 500, uppercase, true) }
+.btn-ghost-lower { @include mix-button($primary-color, $white-color, 0, 500, lowercase, true) }
 
 // palette
-.btn-blue { @include button($white-color, $blue-color) }
-.btn-dark-blue { @include button($white-color, $dark-blue-color) }
-.btn-violet { @include button($white-color, $violet-color) }
-.btn-crimson { @include button($white-color, $crimson-color) }
-.btn-aqua { @include button(rgba(lighten($black-color, 25%), .7), $aqua-color) }
-.btn-coral { @include button($white-color, $coral-color) }
-.btn-gold { @include button(rgba(lighten($black-color, 35%), .7), $gold-color) }
-.btn-green { @include button($white-color, $green-color) }
-.btn-lime-green { @include button($white-color, $lime-green-color) }
+.btn-blue { @include mix-button($blue-color, $white-color) }
+.btn-dark-blue { @include mix-button($dark-blue-color, $white-color) }
+.btn-violet { @include mix-button($violet-color, $white-color) }
+.btn-crimson { @include mix-button($crimson-color, $white-color) }
+.btn-aqua { @include mix-button($aqua-color, rgba(lighten($black-color, 25%), .7)) }
+.btn-coral { @include mix-button($coral-color, $white-color) }
+.btn-gold { @include mix-button($gold-color, rgba(lighten($black-color, 35%), .7)) }
+.btn-green { @include mix-button($green-color, $white-color) }
+.btn-lime-green { @include mix-button($lime-green-color, $white-color) }
 
 // sizes
-.btn-small { @include button-size-variant($button-small-height, $button-small-spacing, $button-small-font-size) }
-.btn-big { @include button-size-variant($button-big-height, $button-big-spacing, $button-big-font-size) }
+.btn-small { @include mix-button-size($mix-small-height, $mix-small-spacing, $mix-small-font-size) }
+.btn-big { @include mix-button-size($mix-big-height, $mix-big-spacing, $mix-big-font-size) }

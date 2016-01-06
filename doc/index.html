@@ -3,17 +3,19 @@ layout: default
 ---
 
 <div class="bg-blue bg-full">
-  <h2># how to use it?</h2>
+  <h2># how to use it? #</h2>
 
 {% highlight scss %}
-.button {
-  @include button(
-    $font-color,
-    $background-color,
-    $border-radius,
-    $font-weight,
-    $boolean-button-ghost,
-    $boolean-uppercase
+@import "mix-buttons";
+
+.my-button {
+  @include mix-button(
+    $custom-font-color, /* default is #fff */
+    $custom-background-color, /* default is #8cd1a8 */
+    $custom-border-radius, /* default is 2px */
+    $custom-font-weight, /* default is 600 */
+    $custom-text-transform, /* default is capitalize */
+    $boolean-is-button-ghost /* default is false */
   );
 }
 {% endhighlight %}
@@ -21,116 +23,127 @@ layout: default
 </div>
 
 <div class="bg-full">
-  <a href="#" class="button">Button</a>
+  <button class="button">Button default</button>
 
 {% highlight scss %}
 .button {
-  @include button(#fff, #8cd1a8);
+  @include mix-button();
 }
 {% endhighlight %}
 
 </div>
 
 <div class="bg-full bg-gray">
-  <a href="#" class="btn-ghost">Ghost</a>
+  <h2># ghost buttons #</h2>
+
+  <button class="btn-ghost">Ghost</button>
 
 {% highlight scss %}
 .btn-ghost {
-  @include button(#fff, #8cd1a8, 0, 300, capitalize, true);
+  @include mix-button(#8cd1a8, #fff, 0, 300, capitalize, true);
 }
 {% endhighlight %}
 
 </div>
 
 <div class="bg-full">
-  <a href="#" class="btn-ghost-primary">Ghost primary</a>
+  <button class="btn-ghost-primary">Ghost primary</button>
 
 {% highlight scss %}
 .btn-ghost-primary {
-  @include button(#8cd1a8, #8cd1a8, 0, 700, capitalize, true);
+  @include mix-button(#8cd1a8, #8cd1a8, 0, 700, capitalize, true);
 }
 {% endhighlight %}
 
 </div>
 
 <div class="bg-full bg-blue">
-  <a href="#" class="btn-ghost-upper">uppercase</a>
-  <a href="#" class="btn-ghost-lower">lowercase</a>
+  <h2># custom text-transform #</h2>
+
+  <button class="btn-ghost-upper">uppercase</button>
+  <button class="btn-ghost-lower">lowercase</button>
 
 {% highlight scss %}
 .btn-ghost-upper {
-  @include button(#fff, #8cd1a8, 0, 500, uppercase, true);
+  @include mix-button(#8cd1a8, #fff, 0, 500, uppercase, true);
 }
 .btn-ghost-lower {
-  @include button(#fff, #8cd1a8, 0, 500, lowercase, true);
+  @include mix-button(#8cd1a8, #fff, 0, 500, lowercase, true);
 }
 {% endhighlight %}
 
 </div>
 
 <div class="bg-full bg-silver">
-  <a href="#" class="btn-blue">Button Blue</a>
+  <button class="btn-blue">Button Blue</button>
 
 {% highlight scss %}
 .btn-blue {
-  @include button(#fff, #4696e5, 0, 700);
+  @include mix-button(#4696e5, #fff, 0, 700);
 }
 {% endhighlight %}
 
 </div>
 
 <div class="bg-full">
-  <a href="#" class="btn-ghost-blue">Ghost Blue</a>
+  <button class="btn-ghost-blue">Ghost Blue</button>
 
 {% highlight scss %}
 .btn-ghost-blue {
-  @include button(#4696e5, #8cd1a8, 0, 500, capitalize, true);
-}
-{% endhighlight %}
-
-</div>
-
-<div class="bg-full bg-gray">
-  <h2># custom your palette colors</h2>
-  <a href="#" class="btn-dark-blue">Dark Blue</a>
-  <a href="#" class="btn-green">Green</a>
-  <a href="#" class="btn-lime-green">Lime Green</a>
-  <a href="#" class="btn-violet">Violet</a>
-  <a href="#" class="btn-crimson">Crimson</a>
-  <a href="#" class="btn-aqua">Aqua</a>
-  <a href="#" class="btn-coral">Coral</a>
-  <a href="#" class="btn-gold">Gold</a>
-</div>
-
-<div class="bg-full">
-  <h2># small size</h2>
-  <a href="#" class="btn-dark-blue btn-small">Dark Blue</a>
-  <a href="#" class="btn-green btn-small">Green</a>
-  <a href="#" class="btn-lime-green btn-small">Lime Green</a>
-  <a href="#" class="btn-violet btn-small">Violet</a>
-  <a href="#" class="btn-crimson btn-small">Crimson</a>
-  <a href="#" class="btn-aqua btn-small">Aqua</a>
-  <a href="#" class="btn-coral btn-small">Coral</a>
-  <a href="#" class="btn-gold btn-small">Gold</a>
-
-{% highlight scss %}
-.btn-small {
-  @include button-size-variant(2em, 1.2em, .8rem);
+  @include mix-button(#4696e5, #4696e5, 0, 500, capitalize, true);
 }
 {% endhighlight %}
 
 </div>
 
 <div class="bg-full bg-silver">
-  <h2># big size</h2>
-  <a href="#" class="btn-green btn-big">Green</a>
-  <a href="#" class="btn-lime-green btn-big">Lime Green</a>
-  <a href="#" class="btn-violet btn-big">Violet</a>
-  <a href="#" class="btn-coral btn-big">Coral</a>
+  <h2># custom border-radius #</h2>
+  <button class="button-no-round">no-round</button>
+  <button class="button-round">round</button>
+  <button class="button-rounded">rounded</button>
+</div>
+
+<div class="bg-full bg-gray">
+  <h2># custom your palette colors #</h2>
+  <button class="btn-dark-blue">Dark Blue</button>
+  <button class="btn-green">Green</button>
+  <button class="btn-lime-green">Lime Green</button>
+  <button class="btn-violet">Violet</button>
+  <button class="btn-crimson">Crimson</button>
+  <button class="btn-aqua">Aqua</button>
+  <button class="btn-coral">Coral</button>
+  <button class="btn-gold">Gold</button>
+</div>
+
+<div class="bg-full">
+  <h2># small size #</h2>
+  <button class="btn-dark-blue btn-small">Dark Blue</button>
+  <button class="btn-green btn-small">Green</button>
+  <button class="btn-lime-green btn-small">Lime Green</button>
+  <button class="btn-violet btn-small">Violet</button>
+  <button class="btn-crimson btn-small">Crimson</button>
+  <button class="btn-aqua btn-small">Aqua</button>
+  <button class="btn-coral btn-small">Coral</button>
+  <button class="btn-gold btn-small">Gold</button>
+
+{% highlight scss %}
+.btn-small {
+  @include mix-button-size(2em, 1.2em, .8rem);
+}
+{% endhighlight %}
+
+</div>
+
+<div class="bg-full bg-silver">
+  <h2># big size #</h2>
+  <button class="btn-green btn-big">Green</button>
+  <button class="btn-lime-green btn-big">Lime Green</button>
+  <button class="btn-violet btn-big">Violet</button>
+  <button class="btn-coral btn-big">Coral</button>
 
 {% highlight scss %}
 .btn-big {
-  @include button-size-variant(3em, 3em, 1.2rem);
+  @include mix-button-size(3em, 3em, 1.2rem);
 }
 {% endhighlight %}
 </div>

@@ -33,8 +33,23 @@ header {
   background-color: #f1f1f1;
   border-bottom: 1px solid #eee;
 
+  h1, p, iframe {
+    animation-name: bounceInDown;
+    animation-fill-mode: both;
+  }
+
+  p {
+    animation-duration: 1.5s;
+  }
+
+  iframe {
+    animation-duration: 1s;
+  }
+
   h1 {
+    animation-duration: 2s;
     font-weight: 500;
+    font-size: 2.6rem;
     margin: 0 0 .8em;
   }
 }
@@ -75,4 +90,32 @@ footer {
 
 .bg-blue {
   background-color: #4a98e5;
+}
+
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    transform: none;
+  }
 }

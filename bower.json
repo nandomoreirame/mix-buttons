@@ -1,12 +1,12 @@
 {
-  "name": "mixin-buttons",
+  "name": "mix-buttons",
   "description": "SASS Mixins for generate beautiful buttons",
-  "homepage": "https://github.com/nandomoreirame/mixin-buttons",
+  "homepage": "https://github.com/nandomoreirame/mix-buttons",
   "author": "Fernando Moreira <nandomoreira.me@gmail.com>",
   "license": "MIT",
   "main": [
     "sass/_variables.scss",
-    "sass/_sass-buttons.scss"
+    "sass/_mix-buttons.scss"
   ],
   "ignore": [
     "**/.*",
@@ -22,9 +22,9 @@
   ],
   "keywords": [
     "sass",
+    "scss",
     "mixins",
     "mixin",
-    "scss",
     "buttons"
   ]
 }
