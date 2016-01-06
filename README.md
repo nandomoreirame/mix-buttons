@@ -1,4 +1,4 @@
-# Mixin buttons #
+# Mix buttons #
 
 > SASS Mixins for generate beautiful buttons
 
@@ -11,15 +11,17 @@
 ```
 @import "mix-buttons";
 
-.my-button-class {
-  @include button(
-    $background-color,
-    $font-color,
-    $border-radius,
-    $font-weight,
-    $boolean-button-ghost,
-    $boolean-uppercase
+.my-button {
+
+  @include mix-button(
+    $custom-font-color, /* default is #fff */
+    $custom-background-color, /* default is #8cd1a8 */
+    $custom-border-radius, /* default is 2px */
+    $custom-font-weight, /* default is 600 */
+    $custom-text-transform, /* default is capitalize */
+    $boolean-is-button-ghost /* default is false */
   );
+
 }
 ```
 
@@ -35,7 +37,7 @@
 
 #### [preview and doc](http://nandomoreira.me/mix-buttons)
 
-![Mixin buttons](/screenshot.png)
+![Mix buttons](/screenshot.png)
 
 ---
 

@@ -5,7 +5,7 @@ require "bundler/setup"
 require "jekyll"
 
 # Change your GitHub reponame
-GITHUB_REPONAME    = "nandomoreirame/mixin-buttons"
+GITHUB_REPONAME    = "nandomoreirame/mix-buttons"
 GITHUB_REPO_BRANCH = "gh-pages"
 
 task default: %w[publish]
