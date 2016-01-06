@@ -33,7 +33,9 @@ header {
   background-color: #f1f1f1;
   border-bottom: 1px solid #eee;
 
-  h1, p, iframe {
+  h1, p, iframe,
+  .twitter-share-button,
+  .fb-like {
     animation-name: bounceInDown;
     animation-fill-mode: both;
   }
@@ -42,6 +44,8 @@ header {
     animation-duration: 1.5s;
   }
 
+  .twitter-share-button,
+  .fb-like,
   iframe {
     animation-duration: 1s;
   }
@@ -52,6 +56,17 @@ header {
     font-size: 2.6rem;
     margin: 0 0 .8em;
   }
+
+  .fb-like {
+    width: 190px;
+    text-align: left;
+  }
+
+  .fb-like span {
+    vertical-align: top !important;
+    top: -5px;
+  }
+
 }
 
 footer {
