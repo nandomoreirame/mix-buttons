@@ -35,9 +35,9 @@
 
 ---
 
-#### [preview and doc](http://nandomoreira.me/mix-buttons)
+#### [preview and doc](https://github.nandomoreira.me/mix-buttons)
 
-<a href="http://nandomoreira.me/mix-buttons">
+<a href="https://github.nandomoreira.me/mix-buttons">
   <img src="/doc/mix-buttons.jpg" alt="Mix buttons">
 </a>
 
@@ -49,4 +49,4 @@ It is free under the [open-source MIT license](/LICENSE).
 
 Enjoy :yum:
 
-by [nandomoreira.me](http://nandomoreira.me)
+by [nandomoreira.me](https://nandomoreira.me)
