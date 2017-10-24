@@ -35,7 +35,7 @@
 
 ---
 
-#### [preview and doc](https://github.nandomoreira.me/mix-buttons)
+#### [preview and doc](https://nandomoreirame.github.io/mix-buttons)
 
 <a href="https://github.nandomoreira.me/mix-buttons">
   <img src="/doc/mix-buttons.jpg" alt="Mix buttons">
